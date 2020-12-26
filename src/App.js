@@ -1,9 +1,13 @@
 import './App.css';
+import Aux from './hoc/Aux';
+import Layout from './components/Layout/Layout';
 
 function App() {
   return (
     <div className="App">
-      <h1>just testing</h1>
+      <Aux>
+        <Layout />
+      </Aux>
     </div>
   );
 }
