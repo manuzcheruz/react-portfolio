@@ -1,0 +1,9 @@
+.svgs img{
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 70px;
+}
+
+.filter-grey {
+    filter: invert(46%) sepia(54%) saturate(0%) hue-rotate(150deg) brightness(98%) contrast(94%);
+}

@@ -1,0 +1,38 @@
+.services-wrapper{
+    width: 70%;
+}
+
+.services-wrapper h1{
+    font-size: 3rem;
+    line-height: 20px;
+}
+
+.services-wrapper .row{
+    display: flex;
+}
+
+.services-wrapper .row .column{
+    flex: 30%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.services-wrapper .row .column .card{
+    width: 100%;
+    height: 250px;
+    overflow: hidden !important;
+    display: block;
+} 
+
+.services-wrapper .row .column .card h2{
+    display: flex;
+    align-items: flex-start;
+}
+
+.services-wrapper .row .column .card h5 {
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.5rem;
+    font-size: 15px;
+    color: grey;
+}

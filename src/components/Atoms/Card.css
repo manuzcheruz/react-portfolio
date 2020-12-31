@@ -21,12 +21,13 @@
 }
 
 .card .content h1 {
-            font-size: 14px;
+            font-size: 25px;
             color: white;
         }
 
 .card .content p {
-            font-size: 10px;
+            font-size: 15px;
+            line-height: 1.5rem;
             color: white;
             margin-bottom: 20px;
         }
@@ -36,10 +37,11 @@
             color: white;
             padding: 10px;
             text-decoration: none;
+            border-radius: 10px;
         }
 
-        /* &:hover {
+.card .content:hover {
             opacity: 1;
             transform: translate(0, 0px);
-        } */
+        } 
     
