@@ -18,7 +18,8 @@ function Navbar() {
           </div>
           <div className="links-wrapper">
             <button onClick={() => scrollToElement("#work")}>Work</button>
-            <button onClick={() => scrollToElement("#about")}>About</button>
+            <button onClick={() => scrollToElement("#Resume")}>About</button>
+            <button onClick={() => scrollToElement("#Services")}>Services</button>
             <button onClick={() => scrollToElement("#contact")}>Contact</button>
           </div>
         </div>

@@ -1,0 +1,11 @@
+.work-I-do-wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 60%;
+
+}
+
+.work-I-do-wrapper h1 {
+    font-size: 3rem;
+    line-height: 20px;
+}

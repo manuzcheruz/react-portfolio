@@ -35,10 +35,13 @@ const header = (props) => {
                 a <span className="heavy">Fullstack Software Engineer</span> 
               </h3>
               <h3>
-                I specialize in both Front End and Back End, Responsive Web Design,
+                I specialize in both Front End and Back End, 
               </h3>
               <h3>
-                UI/UX and Visual Development.
+                Responsive Web Design, UI/UX and
+              </h3>
+              <h3>
+                Visual Development.
               </h3>
             </div>
           </Fade>
