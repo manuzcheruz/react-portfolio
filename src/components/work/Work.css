@@ -1,11 +1,20 @@
 .work-I-do-wrapper {
-    display: flex;
-    align-items: flex-start;
-    width: 60%;
+    width: 70%;
+    margin-bottom: 30px;
 
 }
 
 .work-I-do-wrapper h1 {
+    display: flex;
+    align-items: flex-start;
     font-size: 3rem;
     line-height: 20px;
+}
+
+.row-work{
+    display: flex;
+}
+
+.row-work .column-work{
+    flex: 50%;
 }

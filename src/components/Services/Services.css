@@ -1,5 +1,6 @@
 .services-wrapper{
     width: 70%;
+    margin-bottom: 30px;
 }
 
 .services-wrapper h1{
@@ -17,20 +18,26 @@
     padding-right: 20px;
 }
 
-.services-wrapper .row .column .card{
+.services-wrapper .row .column .serv-card{
     width: 100%;
     height: 250px;
     overflow: hidden !important;
     display: block;
 } 
 
-.services-wrapper .row .column .card h2{
+.services-wrapper .row .column .serv-card .serv-title{
     display: flex;
+}
+
+.services-wrapper .row .column .serv-card .serv-title h2{
     align-items: flex-start;
 }
 
-.services-wrapper .row .column .card h5 {
+.services-wrapper .row .column .serv-card .serv-content{
     display: flex;
+}
+
+.services-wrapper .row .column .serv-card .serv-content h5 {
     align-items: flex-start;
     line-height: 1.5rem;
     font-size: 15px;

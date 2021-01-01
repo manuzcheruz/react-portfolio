@@ -10,8 +10,12 @@
     background-position: center;
 }
 
+.card:hover{
+    opacity: 0.5;
+}
+
 .card .content {
-        font-family: "Open Sans";
+        /* font-family: "Open Sans"; */
         text-align: center;
         padding: 10px;
         opacity: 0;
