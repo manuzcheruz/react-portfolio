@@ -1,13 +1,27 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Fade from 'react-reveal/Fade'
-import { Accordion, AccordionItem } from 'react-light-accordion'
+import Accordion from '../../Utilities/Accordion/Accordion'
 
 import './Faq.css'
-import 'react-light-accordion/demo/css/index.css'
 
 function Faq() {
+    const [ faqs, setFaqs ] = useState('')
+    useEffect(() => {
+      fetch('http://127.0.0.1:8000/faqs/')
+        .then(res => {
+          return res.json()
+        })
+        .then(response => {
+          // console.log(response);
+          setFaqs(response)
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    }, [])
+    
     return (
-        <div className="section" id="clients">
+        <div className="section" id="faqs">
         <div className="container">
             <div className="work-wrapper">
                 <Fade bottom>
@@ -16,21 +30,14 @@ function Faq() {
                 </Fade>
                 <Fade bottom>
                     <div className="faq">
-                        <Accordion atomic={true}>
-
-                            <AccordionItem title="What is your work discipline?">
-                                <DummyContent />
-                            </AccordionItem>
-
-                            <AccordionItem title="Do you work on more than one project?">
-                                <DummyContent />
-                            </AccordionItem>
-
-                            <AccordionItem title="How much does your hourly rate cost?">
-                                <DummyContent />
-                            </AccordionItem>
-
-                        </Accordion>
+                        {faqs && faqs.map(faq => {
+                            return (
+                                <Accordion
+                                    title={faq.question}
+                                    content={faq.answer}
+                                    />
+                            )
+                        })}
                     </div>
                 </Fade>
             </div>
@@ -38,11 +45,5 @@ function Faq() {
     </div>
     )
 }
-
-const DummyContent = () => (
-  <h3 style={{ padding: '10px', fontWeight: '100'}}>
-    Yes, but I do schedule the days and hours for each project and give those hours and days to the people I work with.
-  </h3>
-);
 
 export default Faq

@@ -9,7 +9,8 @@ function Resume(props) {
     const [ experience, setExperience ] = useState('')
     const [ education, setEducation ] = useState('')
     const [ courses, setCourses ] = useState('')
-    const [ skills, setSkills ] = useState('')
+    const [ category, setCategory ] = useState('')
+    const [ tools, setTools ] = useState('')
     useEffect(() => {
       fetch('http://127.0.0.1:8000/experience/')
         .then(res => {
@@ -59,7 +60,21 @@ function Resume(props) {
         })
         .then(response => {
           // console.log(response);
-          setCourses(response)
+          setCategory(response)
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    }, [])
+
+    useEffect(() => {
+      fetch('http://127.0.0.1:8000/tools/')
+        .then(res => {
+          return res.json()
+        })
+        .then(response => {
+          // console.log(response);
+          setTools(response)
         })
         .catch(err => {
           console.log(err);
@@ -75,6 +90,29 @@ function Resume(props) {
                 <Fade bottom>
                     <h1>Resume</h1>
                 </Fade>
+
+                <Fade bottom>
+                    <div className="row">
+                        <div className="column">
+                            <h2>Skills</h2>
+                            <div className="row">
+                                {category && category.map(cat => {
+                                    return (
+                                        <div className="column">
+                                            <h3>{cat.title}</h3>
+                                            {cat.skills.map(skill => {
+                                                return (
+                                                    <h4 className="ex-content">{skill.skill}</h4>
+                                                )
+                                            })}
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                </Fade>
+
                 <Fade bottom>
                     <div className="row">
                         <div className="column">
@@ -90,6 +128,19 @@ function Resume(props) {
                             })} 
                         </div>
                         <div className="column">
+                            <h2 style={{paddingBottom: '30px'}}>Tools</h2>
+                            {tools && tools.map(tool => {
+                                return (
+                                    <h4 className="ex-title">{tool.tool}</h4>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </Fade>
+                
+                <Fade bottom>
+                    <div className="row">
+                        <div className="column">
                             <h2>Education</h2>
                             {education && education.map(ed => {
                                 return (
@@ -100,29 +151,6 @@ function Resume(props) {
                                         period={ed.period} />
                                 )
                             })}
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="column">
-                            <h2>Skills</h2>
-                            <div className="row">
-                                <div className="column">
-                                    <h3>Design</h3>
-                                    <h4 className="ex-content">Product Design</h4>
-                                    <h4 className="ex-content">UI/UX Design</h4>
-                                    <h4 className="ex-content">Visual Design</h4>
-                                    <h4 className="ex-content">Wireframing</h4>
-                                    <h4 className="ex-content">Prototyping</h4>
-                                </div>
-                                <div className="column">
-                                    <h3>Development</h3>
-                                    <h4 className="ex-content">Visual Developement</h4>
-                                    <h4 className="ex-content">Webflow Developement</h4>
-                                    <h4 className="ex-content">Front-End Developement</h4>
-                                    <h4 className="ex-content">HTML5/CSS3</h4>
-                                    <h4 className="ex-content">No-Code Solutions</h4>
-                                </div>
-                            </div>
                         </div>
                         <div className="column">
                             <h2>Online Courses</h2>
@@ -135,31 +163,6 @@ function Resume(props) {
                                         period={course.period} />
                                 )
                             })}
-                        </div>
-                    </div>
-                </Fade>
-                <Fade bottom>
-                    <div className="row">
-                        <div className="column">
-                            <h2>Tools</h2>
-                            <div className="row">
-                                <div className="column">
-                                    <h4 className="ex-title">Figma</h4>
-                                    <h4 className="ex-title">Webflow</h4>
-                                    <h4 className="ex-title">Notion</h4>
-                                    <h4 className="ex-title">Bravo Studio</h4>
-                                    <h4 className="ex-title">Sketch</h4>
-                                </div>
-                                <div className="column">
-                                    <h4 className="ex-title">Whimsical</h4>
-                                    <h4 className="ex-title">Adobe XD</h4>
-                                    <h4 className="ex-title">After Effects</h4>
-                                    <h4 className="ex-title">Photohop</h4>
-                                    <h4 className="ex-title">Visual Studio Code</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="column">
                         </div>
                     </div>
                 </Fade>
