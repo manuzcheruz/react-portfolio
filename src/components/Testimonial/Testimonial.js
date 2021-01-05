@@ -8,7 +8,7 @@ import '../Resume/Resume.css'
 function Testimonial() {
     const [ testimonials, setTestimonials ] = useState('')
     useEffect(() => {
-      fetch('http://127.0.0.1:8000/testimonials/')
+      fetch('https://kipkemoi-backend.herokuapp.com/testimonials/')
         .then(res => {
           return res.json()
         })

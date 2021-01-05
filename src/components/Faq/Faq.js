@@ -7,7 +7,7 @@ import './Faq.css'
 function Faq() {
     const [ faqs, setFaqs ] = useState('')
     useEffect(() => {
-      fetch('http://127.0.0.1:8000/faqs/')
+      fetch('https://kipkemoi-backend.herokuapp.com/faqs/')
         .then(res => {
           return res.json()
         })

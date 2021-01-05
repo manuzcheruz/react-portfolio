@@ -12,7 +12,7 @@ function Resume(props) {
     const [ category, setCategory ] = useState('')
     const [ tools, setTools ] = useState('')
     useEffect(() => {
-      fetch('http://127.0.0.1:8000/experience/')
+      fetch('https://kipkemoi-backend.herokuapp.com/experience/')
         .then(res => {
           return res.json()
         })
@@ -26,7 +26,7 @@ function Resume(props) {
     }, [])
 
     useEffect(() => {
-      fetch('http://127.0.0.1:8000/education/')
+      fetch('https://kipkemoi-backend.herokuapp.com/education/')
         .then(res => {
           return res.json()
         })
@@ -40,7 +40,7 @@ function Resume(props) {
     }, [])
 
     useEffect(() => {
-      fetch('http://127.0.0.1:8000/courses/')
+      fetch('https://kipkemoi-backend.herokuapp.com/courses/')
         .then(res => {
           return res.json()
         })
@@ -54,7 +54,7 @@ function Resume(props) {
     }, [])
 
     useEffect(() => {
-      fetch('http://127.0.0.1:8000/category/')
+      fetch('https://kipkemoi-backend.herokuapp.com/category/')
         .then(res => {
           return res.json()
         })
@@ -68,7 +68,7 @@ function Resume(props) {
     }, [])
 
     useEffect(() => {
-      fetch('http://127.0.0.1:8000/tools/')
+      fetch('https://kipkemoi-backend.herokuapp.com/tools/')
         .then(res => {
           return res.json()
         })

@@ -9,7 +9,7 @@ import './Projects.css'
 function Projects() {
     const [ projects, setProjects ] = useState('')
     useEffect(() => {
-      fetch('http://127.0.0.1:8000/projects/')
+      fetch('https://kipkemoi-backend.herokuapp.com/projects/')
         .then(res => {
           return res.json()
         })

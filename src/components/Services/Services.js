@@ -6,7 +6,7 @@ import './Services.css'
 function Services() {
     const [ services, setServices ] = useState('')
     useEffect(() => {
-      fetch('http://127.0.0.1:8000/services/')
+      fetch('https://kipkemoi-backend.herokuapp.com/services/')
         .then(res => {
           return res.json()
         })

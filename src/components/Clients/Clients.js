@@ -9,7 +9,7 @@ import './Clients.css'
 function Clients() {
     const [ clients, setClients ] = useState('')
     useEffect(() => {
-      fetch('http://127.0.0.1:8000/clients/')
+      fetch('https://kipkemoi-backend.herokuapp.com/clients/')
         .then(res => {
           return res.json()
         })
