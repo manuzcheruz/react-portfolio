@@ -1,12 +1,39 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Fade from 'react-reveal/Fade'
 
 import './Clients.css'
 
-import libryo from '../../Assets/libryo.svg'
-import sakaajira from '../../Assets/sakaajira.svg'
+// import libryo from '../../Assets/libryo.svg'
+// import sakaajira from '../../Assets/sakaajira.svg'
 
 function Clients() {
+    const [ clients, setClients ] = useState('')
+    useEffect(() => {
+      fetch('http://127.0.0.1:8000/clients/')
+        .then(res => {
+          return res.json()
+        })
+        .then(response => {
+          // console.log(response);
+          setClients(response)
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    }, [])
+
+    let data = 'no clients yet'
+    if (clients){
+      data = clients.map(client => (
+                <img
+                  key={client.id}
+                  alt=''
+                  src={client.thumbnail}
+                  className="filter-grey"
+                />
+              ))
+    }
+
     return (
         <div className="section" id="clients">
         <div className="container">
@@ -16,8 +43,7 @@ function Clients() {
                 </Fade>
                 <Fade bottom>
                     <div className="svgs">
-                        <img class="filter-grey" alt="sakaajira" src={sakaajira} />
-                        <img class="filter-grey" alt="libryo" src={libryo} />
+                        {data}
                     </div>
                 </Fade>
             </div>

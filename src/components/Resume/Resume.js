@@ -1,9 +1,73 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Fade from 'react-reveal/Fade'
+
+import Res from "../Atoms/Res";
 
 import './Resume.css'
 
 function Resume(props) {
+    const [ experience, setExperience ] = useState('')
+    const [ education, setEducation ] = useState('')
+    const [ courses, setCourses ] = useState('')
+    const [ skills, setSkills ] = useState('')
+    useEffect(() => {
+      fetch('http://127.0.0.1:8000/experience/')
+        .then(res => {
+          return res.json()
+        })
+        .then(response => {
+          // console.log(response);
+          setExperience(response)
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    }, [])
+
+    useEffect(() => {
+      fetch('http://127.0.0.1:8000/education/')
+        .then(res => {
+          return res.json()
+        })
+        .then(response => {
+          // console.log(response);
+          setEducation(response)
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    }, [])
+
+    useEffect(() => {
+      fetch('http://127.0.0.1:8000/courses/')
+        .then(res => {
+          return res.json()
+        })
+        .then(response => {
+          // console.log(response);
+          setCourses(response)
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    }, [])
+
+    useEffect(() => {
+      fetch('http://127.0.0.1:8000/category/')
+        .then(res => {
+          return res.json()
+        })
+        .then(response => {
+          // console.log(response);
+          setCourses(response)
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    }, [])
+
+    // let work = 'no experience yet'
+    
     return (
         <div className="section" id="clients">
         <div className="container">
@@ -15,31 +79,27 @@ function Resume(props) {
                     <div className="row">
                         <div className="column">
                             <h2>Work Experience</h2>
-                            <div className="block">
-                                <h3>Uber</h3>
-                                <h4 className="ex-title">Product Designer</h4>
-                                <h4 className="ex-content">August 2018 - December 2019</h4>
-                            </div>
-                            
-                            <div className="block">
-                                <h3>Apple</h3>
-                                <h4 className="ex-title">Product Designer</h4>
-                                <h4 className="ex-content">2016 - 2017</h4>
-                            </div>
+                            {experience && experience.map(ex => {
+                                return (
+                                    <Res
+                                        key={ex.title}
+                                        title={ex.company}
+                                        subTitle={ex.role}
+                                        period={ex.period} />
+                                )
+                            })} 
                         </div>
                         <div className="column">
                             <h2>Education</h2>
-                            <div className="block">
-                                <h3>SUNY Polytechnic Institute</h3>
-                                <h4 className="ex-title">MS Information Design & Technology</h4>
-                                <h4 className="ex-content">December 2019 - Current</h4>
-                            </div>
-
-                            <div className="block">
-                                <h3>Florida Gulf Coast University</h3>
-                                <h4 className="ex-title">BA Psychology</h4>
-                                <h4 className="ex-content">2014 - 2015</h4>
-                            </div>
+                            {education && education.map(ed => {
+                                return (
+                                    <Res
+                                        key={ed.university}
+                                        title={ed.university}
+                                        subTitle={ed.course}
+                                        period={ed.period} />
+                                )
+                            })}
                         </div>
                     </div>
                     <div className="row">
@@ -66,17 +126,15 @@ function Resume(props) {
                         </div>
                         <div className="column">
                             <h2>Online Courses</h2>
-                            <div className="block">
-                                <h3>Webflow</h3>
-                                <h4 className="ex-content">The freelancer's Journey</h4>
-                                <h4 className="ex-content">July 2019 - August 2019</h4>
-                            </div>
-
-                            <div className="block">
-                                <h3>SuperHi</h3>
-                                <h4 className="ex-content">Intro to User Experince Design</h4>
-                                <h4 className="ex-content">August 2019 - December 2019</h4>
-                            </div>
+                            {courses && courses.map(course => {
+                                return (
+                                    <Res
+                                        key={course.title}
+                                        title={course.title}
+                                        subTitle={course.sub_title}
+                                        period={course.period} />
+                                )
+                            })}
                         </div>
                     </div>
                 </Fade>

@@ -1,12 +1,39 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Card from "../Atoms/Card"
 import Fade from "react-reveal/Fade"
 
-import data from '../../data'
+// import data from '../../data'
 import './Projects.css'
 
 function Projects() {
+    const [ projects, setProjects ] = useState('')
+    useEffect(() => {
+      fetch('http://127.0.0.1:8000/projects/')
+        .then(res => {
+          return res.json()
+        })
+        .then(response => {
+          // console.log(response);
+          setProjects(response)
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    }, [])
+
+    let data = 'no projects yet'
+    if (projects){
+      data = projects.map(project => (
+                <Card
+                  key={project.description}
+                  heading={project.title}
+                  paragraph={project.description}
+                  imgUrl={project.thumbnail}
+                  projectLink={project.url}
+                ></Card>
+              ))
+    }
     return (
         <div className="section" id="work">
       <div className="container">
@@ -17,15 +44,7 @@ function Projects() {
 
           <div className="grid">
             <Fade bottom cascade>
-              {data.projects.map(project => (
-                <Card
-                  key={project.id}
-                  heading={project.title}
-                  paragraph={project.para}
-                  imgUrl={project.imageSrc}
-                  projectLink={project.url}
-                ></Card>
-              ))}
+              {data}
             </Fade>
           </div>
         </div>
