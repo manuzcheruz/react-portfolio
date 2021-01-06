@@ -1,88 +1,10 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import Fade from 'react-reveal/Fade'
-
-import Res from "../Atoms/Res";
+import { Courses, Education, Experience, Skills, Tools } from './Molecules';
 
 import './Resume.css'
 
 function Resume(props) {
-    const [ experience, setExperience ] = useState('')
-    const [ education, setEducation ] = useState('')
-    const [ courses, setCourses ] = useState('')
-    const [ category, setCategory ] = useState('')
-    const [ tools, setTools ] = useState('')
-    useEffect(() => {
-      fetch('https://kipkemoi-backend.herokuapp.com/experience/')
-        .then(res => {
-          return res.json()
-        })
-        .then(response => {
-          // console.log(response);
-          setExperience(response)
-        })
-        .catch(err => {
-          console.log(err);
-        })
-    }, [])
-
-    useEffect(() => {
-      fetch('https://kipkemoi-backend.herokuapp.com/education/')
-        .then(res => {
-          return res.json()
-        })
-        .then(response => {
-          // console.log(response);
-          setEducation(response)
-        })
-        .catch(err => {
-          console.log(err);
-        })
-    }, [])
-
-    useEffect(() => {
-      fetch('https://kipkemoi-backend.herokuapp.com/courses/')
-        .then(res => {
-          return res.json()
-        })
-        .then(response => {
-          // console.log(response);
-          setCourses(response)
-        })
-        .catch(err => {
-          console.log(err);
-        })
-    }, [])
-
-    useEffect(() => {
-      fetch('https://kipkemoi-backend.herokuapp.com/category/')
-        .then(res => {
-          return res.json()
-        })
-        .then(response => {
-          // console.log(response);
-          setCategory(response)
-        })
-        .catch(err => {
-          console.log(err);
-        })
-    }, [])
-
-    useEffect(() => {
-      fetch('https://kipkemoi-backend.herokuapp.com/tools/')
-        .then(res => {
-          return res.json()
-        })
-        .then(response => {
-          // console.log(response);
-          setTools(response)
-        })
-        .catch(err => {
-          console.log(err);
-        })
-    }, [])
-
-    // let work = 'no experience yet'
-    
     return (
         <div className="section" id="clients">
         <div className="container">
@@ -95,20 +17,7 @@ function Resume(props) {
                     <div className="row">
                         <div className="column">
                             <h2>Skills</h2>
-                            <div className="row">
-                                {category && category.map(cat => {
-                                    return (
-                                        <div className="column">
-                                            <h3>{cat.title}</h3>
-                                            {cat.skills.map(skill => {
-                                                return (
-                                                    <h4 className="ex-content">{skill.skill}</h4>
-                                                )
-                                            })}
-                                        </div>
-                                    )
-                                })}
-                            </div>
+                            {Skills}
                         </div>
                     </div>
                 </Fade>
@@ -117,23 +26,11 @@ function Resume(props) {
                     <div className="row">
                         <div className="column">
                             <h2>Work Experience</h2>
-                            {experience && experience.map(ex => {
-                                return (
-                                    <Res
-                                        key={ex.title}
-                                        title={ex.company}
-                                        subTitle={ex.role}
-                                        period={ex.period} />
-                                )
-                            })} 
+                            {Experience}
                         </div>
                         <div className="column">
                             <h2 style={{paddingBottom: '30px'}}>Tools</h2>
-                            {tools && tools.map(tool => {
-                                return (
-                                    <h4 className="ex-title">{tool.tool}</h4>
-                                )
-                            })}
+                            {Tools}
                         </div>
                     </div>
                 </Fade>
@@ -141,28 +38,12 @@ function Resume(props) {
                 <Fade bottom>
                     <div className="row">
                         <div className="column">
-                            <h2>Education</h2>
-                            {education && education.map(ed => {
-                                return (
-                                    <Res
-                                        key={ed.university}
-                                        title={ed.university}
-                                        subTitle={ed.course}
-                                        period={ed.period} />
-                                )
-                            })}
+                          <h2>Education</h2>
+                            {Education}
                         </div>
                         <div className="column">
                             <h2>Online Courses</h2>
-                            {courses && courses.map(course => {
-                                return (
-                                    <Res
-                                        key={course.title}
-                                        title={course.title}
-                                        subTitle={course.sub_title}
-                                        period={course.period} />
-                                )
-                            })}
+                            {Courses}
                         </div>
                     </div>
                 </Fade>
