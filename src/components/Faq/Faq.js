@@ -25,7 +25,7 @@ function Faq() {
         <div className="container">
             <div className="work-wrapper">
                 <Fade bottom>
-                    <h1>A few things</h1>
+                    <h1>A few things <span style={{fontSize: '50px'}}>&#128580;</span></h1>
                     <h1>clients normally ask me:</h1>
                 </Fade>
                 <Fade bottom>

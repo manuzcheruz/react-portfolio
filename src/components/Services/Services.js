@@ -24,6 +24,9 @@ function Services() {
       data = services.map(service => (
                 <div className="column">
                             <div className="serv-card">
+                                <div style={{textAlign: 'left'}}>
+                                    <img src={service.thumbnail} height="20px" alt="" />
+                                </div>
                                 <div className="serv-title">
                                     <h2>
                                         {service.title}
@@ -39,7 +42,7 @@ function Services() {
               ))
     }
     return (
-        <div className="section" id="clients">
+        <div className="section" id="services">
         <div className="container">
             <div className="services-wrapper">
                 <Fade bottom>

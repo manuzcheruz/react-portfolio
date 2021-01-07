@@ -1,12 +1,14 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
-import { Courses, Education, Experience, Skills, Tools } from './Molecules';
+import { Courses, Education, Experience, Skills, Tools } from './Molecules'
 
 import './Resume.css'
 
+import me2 from '../../Assets/me2.png'
+
 function Resume(props) {
     return (
-        <div className="section" id="clients">
+        <div className="section" id="resume">
         <div className="container">
             <div className="resume-wrapper">
                 <Fade bottom>
@@ -17,7 +19,7 @@ function Resume(props) {
                     <div className="row">
                         <div className="column">
                             <h2>Skills</h2>
-                            {Skills}
+                            {Skills()}
                         </div>
                     </div>
                 </Fade>
@@ -26,11 +28,11 @@ function Resume(props) {
                     <div className="row">
                         <div className="column">
                             <h2>Work Experience</h2>
-                            {Experience}
+                            {Experience()}
                         </div>
                         <div className="column">
                             <h2 style={{paddingBottom: '30px'}}>Tools</h2>
-                            {Tools}
+                            {Tools()}
                         </div>
                     </div>
                 </Fade>
@@ -38,12 +40,19 @@ function Resume(props) {
                 <Fade bottom>
                     <div className="row">
                         <div className="column">
-                          <h2>Education</h2>
-                            {Education}
+                            <h2>Online Courses</h2>
+                            {Courses()}
                         </div>
                         <div className="column">
-                            <h2>Online Courses</h2>
-                            {Courses}
+                          <h2>Education</h2>
+                            {Education()}
+                            <div style={{marginTop: '100px',textAlign: 'left', display: 'grid', gridTemplateColumns: '1fr 2fr'}}>
+                                <img src={me2} style={{height: '200px'}} alt="" />
+                                <div style={{paddingTop: '70px'}}>
+                                    <h2>Got a Project?</h2>
+                                    <h1 style={{textDecoration: 'underline'}}>Lets Talk!</h1>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </Fade>

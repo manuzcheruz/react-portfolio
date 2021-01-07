@@ -35,7 +35,7 @@ function Projects() {
               ))
     }
     return (
-        <div className="section" id="work">
+        <div className="section" id="works">
       <div className="container">
         <div className="work-wrapper">
           <Fade bottom>

@@ -9,7 +9,6 @@ function Courses() {
           return res.json()
         })
         .then(response => {
-          // console.log(response);
           setCourses(response)
         })
         .catch(err => {

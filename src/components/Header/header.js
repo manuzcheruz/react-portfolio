@@ -3,15 +3,20 @@ import Fade from 'react-reveal/Fade'
 
 import './Header.css'
 
+import me from '../../Assets/me.png'
+
 const header = (props) => {
     return (
         <div className="section" id="home">
       <div className="container">
         <div className="header-wrapper">
           <Fade bottom>
+            <div style={{backgroundColor: '#f2f7f7', borderRadius: '50%'}}>
+              <img style={{height: '130px'}} src={me} alt="" />
+            </div>
             <h2>
               Hi, I'm Kipkemoi
-              <span role="img" aria-label="Emoji">
+              <span style={{paddingLeft: '10px'}} role="img" aria-label="Emoji">
                 👋
               </span>
             </h2>

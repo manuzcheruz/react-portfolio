@@ -12,9 +12,30 @@
 }
 
 .row-work{
-    display: flex;
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
 }
 
-.row-work .column-work{
-    flex: 50%;
+/* .row-work .column-work{
+    grid-column: auto;
+} */
+
+
+.work-content{
+    display: block;
+}
+
+.work-title{
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.work-desc{
+    display: flex;
+    align-items: flex-start;
+    font-weight: 100;
+    text-align: left;
 }
