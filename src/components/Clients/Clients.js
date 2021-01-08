@@ -42,7 +42,7 @@ function Clients() {
                     <h1>Clients</h1>
                 </Fade>
                 <Fade bottom>
-                    <div className="svgs">
+                    <div className="svgs" style={{marginTop: '30px'}}>
                         {data}
                     </div>
                 </Fade>

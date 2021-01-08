@@ -14,24 +14,27 @@
 
 .services-wrapper .row .column{
     flex: 30%;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .services-wrapper .row .column .serv-card{
     width: 100%;
-    height: 250px;
+    height: 300px;
+    width: 250px;
     overflow: hidden !important;
     display: block;
 } 
 
 .services-wrapper .row .column .serv-card .serv-title{
     display: flex;
+    padding: 0;
 }
 
 .services-wrapper .row .column .serv-card .serv-title h2{
     align-items: flex-start;
     text-align: left;
+    line-height: 1.5rem;
 }
 
 .services-wrapper .row .column .serv-card .serv-content{

@@ -23,11 +23,11 @@ function Services() {
     if (services){
       data = services.map(service => (
                 <div className="column">
-                            <div className="serv-card">
+                            <div className="serv-card" style={{backgroundColor: 'white', padding: '15px'}}>
                                 <div style={{textAlign: 'left'}}>
-                                    <img src={service.thumbnail} height="20px" alt="" />
+                                    <img src={service.thumbnail} height="70px" alt="" />
                                 </div>
-                                <div className="serv-title">
+                                <div className="serv-title" style={{marginTop: '10px'}}>
                                     <h2>
                                         {service.title}
                                     </h2>
@@ -43,16 +43,18 @@ function Services() {
     }
     return (
         <div className="section" id="services">
-        <div className="container">
-            <div className="services-wrapper">
+        <div className="container" style={{marginTop: '50px'}}>
+            <div style={{display: 'block', zIndex: '1', textAlign: 'center' , height: '500px', backgroundColor: '#f2f7f7', width: '45%'}}>
+            <div className="services-wrapper" style={{zIndex: '2', width:'900px', marginLeft:'-200px'}}>
                 <Fade bottom>
-                    <h1>Services</h1>
+                    <h1 style={{paddingBottom: '20px', marginLeft: '150px'}}>Services</h1>
                 </Fade>
                 <Fade bottom>
                     <div className="row">
                         {data}
                     </div>
                 </Fade>
+            </div>
             </div>
         </div>
     </div>

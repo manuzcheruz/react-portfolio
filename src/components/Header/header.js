@@ -10,7 +10,7 @@ const header = (props) => {
         <div className="section" id="home">
       <div className="container">
         <div className="header-wrapper">
-          <Fade bottom>
+          <Fade top>
             <div style={{backgroundColor: '#f2f7f7', borderRadius: '50%'}}>
               <img style={{height: '130px'}} src={me} alt="" />
             </div>
