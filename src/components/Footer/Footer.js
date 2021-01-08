@@ -1,10 +1,39 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Fade from "react-reveal/Fade"
 import data from '../../data'
 
 import './Footer.css'
 
 function Footer() {
+  const [social, setSocial] = useState('')
+  const [mail, setMail] = useState('')
+  useEffect(()=> {
+    fetch('https://kipkemoi-backend.herokuapp.com/social/')
+        .then(res => {
+          return res.json()
+        })
+        .then(response => {
+          // console.log(response);
+          setSocial(response)
+        })
+        .catch(err => {
+          console.log(err);
+        })
+  }, [])
+
+  useEffect(()=> {
+    fetch('https://kipkemoi-backend.herokuapp.com/mail/')
+        .then(res => {
+          return res.json()
+        })
+        .then(response => {
+          console.log(response);
+          setMail(response)
+        })
+        .catch(err => {
+          console.log(err);
+        })
+  }, [])
     return (
         <div className="section" id="contact">
       <div className="container">
@@ -12,19 +41,24 @@ function Footer() {
         <div className="line"></div>
         <div className="icons-email">
           <div className="social-icons">
-            {data.social.map(socialLink => (
+            {social && social.map(socialLink => (
               <a
                 href={socialLink.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{paddingLeft: '15px'}}
               >
-                <img src={socialLink.img} alt="icons"></img>
+                <img src={socialLink.icon} alt="icons"></img>
               </a>
             ))}
           </div>
-          <a className="email-link" href={`mailto:${data.contactEmail}`}>
-            {data.contactEmail}
-          </a>
+          {mail && mail.map(item => {
+            return (
+              <a className="email-link" href={`mailto:${item.email}`}>
+                {item.email}
+              </a>
+            )
+          })}
         </div>
         </div>
       </div>

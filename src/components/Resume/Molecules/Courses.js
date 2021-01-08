@@ -23,7 +23,8 @@ function Courses() {
                         key={course.title}
                         title={course.title}
                         subTitle={course.sub_title}
-                        period={course.period} />
+                        period={course.period}
+                        url={course.url} />
                 )
             })}
 

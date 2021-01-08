@@ -12,8 +12,12 @@ function CallToAction() {
                     <h1>talk about a potential</h1>
                     <h1>collaboration. I'm available</h1>
                     <h1>for freelance work.</h1>
-                    <h1 style={{textDecoration: 'underline', marginTop: '100px', color: '#f5b48c'}}>
-                        Lets create your web app <span style={{paddingLeft: '10px'}}><Arrow height={35} /></span>
+                </Fade>
+                <Fade left cascade>
+                    <h1 style={{textDecoration: 'underline', marginTop: '100px'}}>
+                        <a style={{color: '#f5b48c'}} href="mailto:kipkemoiemmanuel@icloud.com">
+                            Lets create your web app <span style={{paddingLeft: '10px'}}><Arrow height={35} /></span>
+                        </a> 
                     </h1>
                 </Fade>
             </div>

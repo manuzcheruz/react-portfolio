@@ -29,3 +29,8 @@
         /* .active {
             color: black;
         } */
+
+.email-link {
+    font-size: 1.5rem;
+    color: black;
+}

@@ -24,7 +24,8 @@ function Education() {
                         key={ed.university}
                         title={ed.university}
                         subTitle={ed.course}
-                        period={ed.period} />
+                        period={ed.period}
+                        url={ed.url} />
                 )
             })}
         </div>
