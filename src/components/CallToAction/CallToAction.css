@@ -1,0 +1,83 @@
+.cta-wrapper {
+    width: 70%;
+    text-align: left;
+}
+
+.cta-wrapper p {
+    font-size: 3rem;
+    line-height: 20px;
+}
+
+.cta-message {
+    text-decoration: underline;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.cta-message a {
+    color: #f5b48c;
+    font-size: 3rem;
+}
+
+.cta-message .cta-arrow {
+    padding-left: 10px;
+}
+
+/* Extra small small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+    .cta-wrapper {
+        width: 95%;
+    }
+    .cta-wrapper p {
+        font-size: 1.7rem;
+        line-height: 30px;
+    }
+    .cta-message a {
+        font-size: 1.7rem;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 400px) {
+    .cta-wrapper {
+        width: 90%;
+    }
+
+    .cta-wrapper p {
+        font-size: 1.8rem;
+        line-height: 30px;
+    }
+    .cta-message a {
+        font-size: 1.8rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) {
+    .cta-wrapper {
+        width: 80%;
+    }
+
+    .cta-wrapper p {
+        font-size: 2.5rem;
+        line-height: 40px;
+    }
+    .cta-message a {
+        font-size: 2.5rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .cta-wrapper {
+        width: 70%;
+    }
+
+    .cta-wrapper p {
+        font-size: 3rem;
+        line-height: 45px;
+    }
+    .cta-message a {
+        font-size: 3rem;
+    }
+}

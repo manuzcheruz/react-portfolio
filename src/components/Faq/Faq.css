@@ -1,3 +1,18 @@
+.faq-wrapper {
+    width: 60%;
+    margin-bottom: 30px;
+
+}
+
+.faq-wrapper h1 {
+    font-size: 3rem;
+    line-height: 20px;
+}
+
+.faq-emoji {
+    font-size: 50px;
+}
+
 .faq {
     width: 60%;
 }
@@ -5,4 +20,69 @@
 .faq-h1 {
     line-height: 15px;
     font-size: 1rem;
+}
+
+/* Extra small small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+    .faq-wrapper {
+        width: 95%;
+    }
+
+    .faq-wrapper h1 {
+        font-size: 1.7rem;
+        line-height: 10px;
+    }
+    .faq-emoji {
+        font-size: 28px;
+    }
+    .faq-h1 {
+        line-height: 15px;
+        font-size: 1rem;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 400px) {
+    .faq-wrapper {
+        width: 90%;
+    }
+
+    .faq-wrapper h1 {
+        font-size: 1.8rem;
+        line-height: 10px;
+    }
+    .faq-emoji {
+        font-size: 35px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) {
+    .faq-wrapper {
+        width: 80%;
+    }
+
+    .faq-wrapper h1 {
+        font-size: 2.5rem;
+        line-height: 10px;
+    }
+    .faq-emoji {
+        font-size: 40px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .faq-wrapper {
+        width: 70%;
+    }
+
+    .faq-wrapper h1 {
+        font-size: 3rem;
+        line-height: 15px;
+    }
+
+    .faq-emoji {
+        font-size: 50px;
+    }
 }

@@ -29,4 +29,55 @@
         @include media(">=tablet", "<desktop") {
             grid-template-columns: 1fr 1fr;
         } */
-    
+
+/* Extra small small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+    .work-wrapper h1 {
+        font-size: 2rem;
+    }
+    .work-wrapper .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 400px) {
+    .work-wrapper h1 {
+        font-size: 2.2rem;
+    }
+    .work-wrapper .grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) {
+    .work-wrapper h1 {
+        font-size: 2.5rem;
+    }
+    .work-wrapper .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .work-wrapper h1 {
+        font-size: 3rem;
+    }
+    .work-wrapper .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    .work-wrapper .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media screen and (min-width: 1200px) {
+
+} */

@@ -11,19 +11,8 @@
         text-align: center;
         line-height: 10px;
         font-weight: 700;
+        width: 100%;
 }
-
-        /* @include media(">=phone", "<lgphone") {
-            font-size: 14px;
-        }
-
-        @include media(">=lgphone", "<tablet") {
-            font-size: 16px;
-        }
-
-        @include media(">=tablet", "<desktop") {
-            font-size: 16px;
-        } */
 
 .heading-wrapper h1 {
             font-size: 4rem;
@@ -32,42 +21,11 @@
             font-weight: bold;
 }
 
-            /* @include media(">=phone", "<lgphone") {
-                font-size: 1.5rem;
-                line-height: 10px;
-            }
-
-            @include media(">=lgphone", "<tablet") {
-                font-size: 1.5rem;
-                line-height: 10px;
-            }
-
-            @include media(">=tablet", "<desktop") {
-                font-size: 2.5rem;
-            } */
-        
-    
-
-.heading-wrapper p {
+/* .heading-wrapper p {
         width: 50%;
         text-align: center;
         overflow: hidden;
-}
-
-        /* @include media(">=phone", "<lgphone") {
-            font-size: 12px;
-            width: 100%;
-        }
-
-        @include media(">=lgphone", "<tablet") {
-            font-size: 12px;
-            width: 100%;
-        }
-
-        @include media(">=tablet", "<desktop") {
-            font-size: 14px;
-            width: 100%;
-        } */
+} */
 
 .heading-more-info h3 {
     font-size: 1.5rem;
@@ -76,6 +34,100 @@
     font-weight: 200;
 }
 
-.heading-more-info h3 .heavy{
+.heading-more-info h3 .heavy {
     font-weight: bold;
 }
+
+/* Extra small small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+    .header-wrapper {
+        width: 95%;
+    }
+    .header-wrapper h1 {
+        font-size: 1.7rem;
+        line-height: 10px;
+    }
+    .header-wrapper h2 {
+        font-size: 1rem;
+    }
+    .heading-more-info h3 {
+        font-size: 1rem;
+        line-height: 20px;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 400px) {
+    .header-wrapper {
+        width: 95%;
+    }
+    .header-wrapper h1{
+        font-size: 1.8rem;
+        line-height: 10px;
+    }
+    .header-wrapper h2 {
+        font-size: 1.2rem;
+    }
+    .heading-more-info h3 {
+        font-size: 1rem;
+        line-height: 20px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 601px) {
+    .header-wrapper {
+        width: 85%;
+    }
+    .header-wrapper h1{
+        font-size: 2.5rem;
+        line-height: 10px;
+    }
+    .header-wrapper h2 {
+        font-size: 1.4rem;
+    }
+    .heading-more-info h3 {
+        font-size: 1.2rem;
+        /* line-height: 20px; */
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .header-wrapper {
+        width: 80%;
+    }
+    .header-wrapper h1{
+        font-size: 3rem;
+    }
+    .header-wrapper h2 {
+        font-size: 1.8rem;
+    }
+    .heading-more-info h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    .header-wrapper h1 {
+        font-size: 3.5rem;
+    }
+    .header-wrapper h2 {
+        font-size: 2rem;
+    }
+    .heading-more-info h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+    .header-wrapper h1 {
+        font-size: 4rem;
+    }
+    .heading-more-info h3 {
+        font-size: 1.5rem;
+    }
+}
+

@@ -23,13 +23,13 @@ function Faq() {
     return (
         <div className="section" id="faqs">
         <div className="container">
-            <div className="work-wrapper">
+            <div className="faq-wrapper">
                 <Fade bottom>
-                    <h1>A few things <span style={{fontSize: '50px'}}>&#128580;</span></h1>
+                    <h1>A few things <span className="faq-emoji">&#128580;</span></h1>
                     <h1>clients normally ask me:</h1>
                 </Fade>
                 <Fade bottom>
-                    <div className="faq">
+                    <div className="faq" style={{width: '100%'}}>
                         {faqs && faqs.map(faq => {
                             return (
                                 <Accordion

@@ -28,6 +28,7 @@
     font-weight: bold;
     font-size: 30px;
     line-height: 2rem;
+    text-align: left;
 }
 
 /* Style the accordion chevron icon */
@@ -55,4 +56,53 @@
     font-weight: 100;
     font-size: 20px;
     padding: 10px;
+}
+
+/* Extra small small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+    .accordion__title {
+        font-size: 1rem;
+        line-height: 20px;
+    }
+    .accordion__icon {
+        margin-top: 18px;
+    }
+    .accordion__text {
+        font-size: 15px;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 400px) {
+    .accordion__title {
+        font-size: 1.2rem;
+        line-height: 20px;
+    }
+
+    .accordion__icon {
+        margin-top: 20px;
+    }
+    .accordion__content {
+        height: 100%;
+    }
+
+    .accordion__text {
+        font-size: 17px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) {
+    .accordion__title {
+        font-size: 1.5rem;
+        line-height: 20px;
+    }
+
+    .accordion__icon {
+        margin-top: 18px;
+    }
+
+    .accordion__text {
+        font-size: 20px;
+    }
 }

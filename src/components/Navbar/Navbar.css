@@ -20,17 +20,23 @@
             border: 0px;
             cursor: pointer;
             color: grey;
-
-            /* &:hover {
-                opacity: 1;
-            } */
         }
 
-        /* .active {
-            color: black;
-        } */
+.navbar-wrapper .links-wrapper button:hover{
+    opacity: 1;
+}
+
+.navbar-wrapper .links-wrapper button .active{
+    color: black;
+}
 
 .email-link {
     font-size: 1.5rem;
     color: black;
+}
+
+@media screen and (max-width: 992px){
+    .navbar-wrapper .links-wrapper {
+        display: none;
+    }
 }

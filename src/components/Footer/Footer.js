@@ -1,6 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import Fade from "react-reveal/Fade"
-import data from '../../data'
 
 import './Footer.css'
 
@@ -27,7 +25,6 @@ function Footer() {
           return res.json()
         })
         .then(response => {
-          console.log(response);
           setMail(response)
         })
         .catch(err => {

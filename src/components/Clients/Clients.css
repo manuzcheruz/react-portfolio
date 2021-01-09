@@ -2,6 +2,11 @@
     margin-bottom: 30px;
 }
 
+.svgs {
+    display: flex;
+    flex-direction: row;
+}
+
 .svgs img{
     padding-left: 40px;
     padding-right: 40px;
@@ -10,4 +15,32 @@
 
 .filter-grey {
     filter: invert(46%) sepia(54%) saturate(0%) hue-rotate(150deg) brightness(98%) contrast(94%);
+}
+
+/* Extra small small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+    .svgs {
+        flex-direction: column;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 400px) {
+    .svgs {
+        flex-direction: column;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) {
+    .svgs {
+        flex-direction: column;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .svgs {
+        flex-direction: row;
+    }
 }
