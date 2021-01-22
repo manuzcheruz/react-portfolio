@@ -4,6 +4,18 @@ import Skeleton from 'react-loading-skeleton'
 
 import './Services.css'
 
+const placeHolder = [
+    {
+        one: '1'
+    },
+    {
+        two: '2'
+    },
+    {
+        three: '2'
+    }
+]
+
 function Services() {
     const [ services, setServices ] = useState('')
     useEffect(() => {
@@ -20,7 +32,8 @@ function Services() {
         })
     }, [])
 
-    let data = <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridGap: '15px'}}>
+    let data = placeHolder.map((item, i) => {
+        return (
         <div className="column">
                                 <div className="serv-card" style={{backgroundColor: 'white', padding: '15px'}}>
                                     <div style={{textAlign: 'left'}}>
@@ -38,42 +51,8 @@ function Services() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="column">
-                            <div className="serv-card" style={{backgroundColor: 'white', padding: '15px'}}>
-                                <div style={{textAlign: 'left'}}>
-                                    <Skeleton height={70} width={70}/>
-                                </div>
-                                <div className="serv-title" style={{marginTop: '10px'}}>
-                                    <h2>
-                                        <Skeleton height={40} width={250}/>
-                                    </h2>
-                                </div>
-                                <div className="serv-content">
-                                    <p>
-                                        <Skeleton count={5} height={20} width={250}/>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="column">
-                            <div className="serv-card" style={{backgroundColor: 'white', padding: '15px'}}>
-                                <div style={{textAlign: 'left'}}>
-                                    <Skeleton height={70} width={70}/>
-                                </div>
-                                <div className="serv-title" style={{marginTop: '10px'}}>
-                                    <h2>
-                                        <Skeleton height={40} width={250}/>
-                                    </h2>
-                                </div>
-                                <div className="serv-content">
-                                    <p>
-                                        <Skeleton count={5} height={20} width={250}/>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-    </div>
+        )
+    })
     if (services){
       data = services.map(service => (
                 <div className="column">

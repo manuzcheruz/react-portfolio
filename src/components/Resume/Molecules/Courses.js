@@ -1,11 +1,24 @@
 import React, {useState, useEffect} from 'react'
 import Res from '../../Atoms/Res'
 import Skeleton from 'react-loading-skeleton'
+import Aux from '../../../hoc/Aux'
+
+const placeHolder = [
+    {
+        one: '1'
+    },
+    {
+        two: '2'
+    },
+    {
+        three: '2'
+    }
+]
 
 function Courses() {
     const [ courses, setCourses ] = useState('')
     useEffect(() => {
-      fetch('https://kipkemoi-backend.herokuapp.com/courses1/')
+      fetch('https://kipkemoi-backend.herokuapp.com/courses/')
         .then(res => {
           return res.json()
         })
@@ -17,19 +30,17 @@ function Courses() {
         })
     }, [])
 
-    let data = <div style={{textAlign: 'left'}}>
-      <div style={{paddingTop: '30px'}}><Skeleton height={40} width={190} /></div>
-      <div style={{paddingTop: '20px'}}><Skeleton height={30} width={330} /></div>
-      <div style={{paddingTop: '20px'}}><Skeleton height={30} width={250} /></div>
-
-      <div style={{paddingTop: '50px'}}><Skeleton height={40} width={190} /></div>
-      <div style={{paddingTop: '20px'}}><Skeleton height={30} width={330} /></div>
-      <div style={{paddingTop: '20px'}}><Skeleton height={30} width={250} /></div>
-
-      <div style={{paddingTop: '50px'}}><Skeleton height={40} width={190} /></div>
-      <div style={{paddingTop: '20px'}}><Skeleton height={30} width={330} /></div>
-      <div style={{paddingTop: '20px'}}><Skeleton height={30} width={250} /></div>
-    </div>
+    let data = placeHolder.map((item, i) => {
+      return (
+        <Res 
+          loader={<Aux>
+            <h3><Skeleton height={40} width={190} /></h3>
+            <h4 className="ex-title"><Skeleton height={30} width={330} /></h4>
+            <h4 className="ex-content"><Skeleton height={30} width={250} /></h4> 
+          </Aux>}
+          />
+      )
+    })
     if (courses) {
       data = courses.map(course => {
                 return (

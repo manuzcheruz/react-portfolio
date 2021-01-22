@@ -1,11 +1,21 @@
 import React, {useEffect, useState} from 'react'
 import Skeleton from 'react-loading-skeleton'
+import Aux from '../../../hoc/Aux'
 import Res from '../../Atoms/Res'
+
+const placeHolder = [
+    {
+        one: '1'
+    },
+    {
+        two: '2'
+    }
+]
 
 function Education() {
     const [ experience, setExperience ] = useState('')
     useEffect(() => {
-      fetch('https://kipkemoi-backend.herokuapp.com/experience1/')
+      fetch('https://kipkemoi-backend.herokuapp.com/experience/')
         .then(res => {
           return res.json()
         })
@@ -18,15 +28,17 @@ function Education() {
         })
     }, [])
 
-    let data = <div style={{textAlign: 'left'}}>
-      <div style={{paddingTop: '30px'}}><Skeleton height={40} width={190} /></div>
-      <div style={{paddingTop: '20px'}}><Skeleton height={30} width={330} /></div>
-      <div style={{paddingTop: '20px'}}><Skeleton height={30} width={250} /></div>
-
-      <div style={{paddingTop: '50px'}}><Skeleton height={40} width={190} /></div>
-      <div style={{paddingTop: '20px'}}><Skeleton height={30} width={330} /></div>
-      <div style={{paddingTop: '20px'}}><Skeleton height={30} width={250} /></div>
-    </div>
+    let data = placeHolder.map((item, i) => {
+      return (
+        <Res 
+          loader={<Aux>
+            <h3><Skeleton height={40} width={190} /></h3>
+            <h4 className="ex-title"><Skeleton height={30} width={330} /></h4>
+            <h4 className="ex-content"><Skeleton height={30} width={250} /></h4> 
+          </Aux>}
+          />
+      )
+    })
     if (experience) {
       data = experience.map(ex => {
                 return (

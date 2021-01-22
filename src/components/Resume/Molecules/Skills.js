@@ -57,7 +57,7 @@ const placeHolder = [
 function Skills() {
     const [ category, setCategory ] = useState('')
     useEffect(() => {
-      fetch('https://kipkemoi-backend.herokuapp.com/category1/')
+      fetch('https://kipkemoi-backend.herokuapp.com/category/')
         .then(res => {
           return res.json()
         })

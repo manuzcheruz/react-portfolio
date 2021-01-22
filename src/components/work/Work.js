@@ -18,7 +18,7 @@ const placeHolder = [
 function Work() {
     const [ projects, setProjects ] = useState('')
     useEffect(() => {
-      fetch('https://kipkemoi-backend.herokuapp.com/work1/')
+      fetch('https://kipkemoi-backend.herokuapp.com/work/')
         .then(res => {
           return res.json()
         })

@@ -22,7 +22,7 @@ const placeHolder = [
 function Clients() {
     const [ clients, setClients ] = useState('')
     useEffect(() => {
-      fetch('https://kipkemoi-backend.herokuapp.com/clients1/')
+      fetch('https://kipkemoi-backend.herokuapp.com/clients/')
         .then(res => {
           return res.json()
         })
