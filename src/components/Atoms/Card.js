@@ -2,18 +2,16 @@ import React from "react"
 
 import './Card.css'
 
-const Card = ({ heading, paragraph, imgUrl, projectLink }) => {
+const Card = ({ heading, paragraph, imgUrl, projectLink, loader }) => {
   return (
     <div
       className="card"
       style={{
-        backgroundImage:
-          "linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(0, 0, 0, 0.2)),url(" +
-          imgUrl +
-          ")", 
-          borderRadius: '10px'
+        backgroundImage: `url(${imgUrl})`,
+          borderRadius: '5px'
       }}
     >
+      {loader? loader : 
       <div className="content">
         <h1 className="header">{heading}</h1>
         <p className="text">{paragraph}</p>
@@ -25,7 +23,7 @@ const Card = ({ heading, paragraph, imgUrl, projectLink }) => {
         >
           Explore
         </a>
-      </div>
+      </div>}
     </div>
   )
 }

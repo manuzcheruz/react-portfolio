@@ -8,6 +8,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    /* box-shadow: 0 2px 2px 0 rgba(43, 46, 207, 0.1) */
 }
 
 .card:hover{

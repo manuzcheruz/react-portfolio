@@ -5,11 +5,27 @@ import Fade from "react-reveal/Fade"
 
 // import data from '../../data'
 import './Projects.css'
+import Skeleton from 'react-loading-skeleton'
+
+const placeHolder = [
+    {
+        one: '1'
+    },
+    {
+        two: '2'
+    },
+    {
+        three: '3'
+    },
+    {
+        four: '3'
+    }
+]
 
 function Projects() {
     const [ projects, setProjects ] = useState('')
     useEffect(() => {
-      fetch('https://kipkemoi-backend.herokuapp.com/projects/')
+      fetch('https://kipkemoi-backend.herokuapp.com/projects1/')
         .then(res => {
           return res.json()
         })
@@ -22,7 +38,13 @@ function Projects() {
         })
     }, [])
 
-    let data = 'no projects yet'
+    let data = placeHolder.map((item, i) => {
+      return (
+        <Card 
+          loader={<Skeleton width={350} height={250}/>}
+          />
+      )
+    })
     if (projects){
       data = projects.map(project => (
                 <Card

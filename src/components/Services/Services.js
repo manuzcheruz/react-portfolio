@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react'
 import Fade from 'react-reveal/Fade'
+import Skeleton from 'react-loading-skeleton'
 
 import './Services.css'
 
 function Services() {
     const [ services, setServices ] = useState('')
     useEffect(() => {
-      fetch('https://kipkemoi-backend.herokuapp.com/services/')
+      fetch('https://kipkemoi-backend.herokuapp.com/services1/')
         .then(res => {
           return res.json()
         })
@@ -19,7 +20,60 @@ function Services() {
         })
     }, [])
 
-    let data = 'no services yet'
+    let data = <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridGap: '15px'}}>
+        <div className="column">
+                                <div className="serv-card" style={{backgroundColor: 'white', padding: '15px'}}>
+                                    <div style={{textAlign: 'left'}}>
+                                        <Skeleton height={70} width={70}/>
+                                    </div>
+                                    <div className="serv-title" style={{marginTop: '10px'}}>
+                                        <h2>
+                                            <Skeleton height={40} width={250}/>
+                                        </h2>
+                                    </div>
+                                    <div className="serv-content">
+                                        <p>
+                                            <Skeleton count={5} height={20} width={250}/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="column">
+                            <div className="serv-card" style={{backgroundColor: 'white', padding: '15px'}}>
+                                <div style={{textAlign: 'left'}}>
+                                    <Skeleton height={70} width={70}/>
+                                </div>
+                                <div className="serv-title" style={{marginTop: '10px'}}>
+                                    <h2>
+                                        <Skeleton height={40} width={250}/>
+                                    </h2>
+                                </div>
+                                <div className="serv-content">
+                                    <p>
+                                        <Skeleton count={5} height={20} width={250}/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="column">
+                            <div className="serv-card" style={{backgroundColor: 'white', padding: '15px'}}>
+                                <div style={{textAlign: 'left'}}>
+                                    <Skeleton height={70} width={70}/>
+                                </div>
+                                <div className="serv-title" style={{marginTop: '10px'}}>
+                                    <h2>
+                                        <Skeleton height={40} width={250}/>
+                                    </h2>
+                                </div>
+                                <div className="serv-content">
+                                    <p>
+                                        <Skeleton count={5} height={20} width={250}/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+    </div>
     if (services){
       data = services.map(service => (
                 <div className="column">

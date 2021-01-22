@@ -1,15 +1,28 @@
 import React, {useEffect, useState} from 'react'
 import Fade from 'react-reveal/Fade'
+import Skeleton from 'react-loading-skeleton'
 
 import './Clients.css'
 
-// import libryo from '../../Assets/libryo.svg'
-// import sakaajira from '../../Assets/sakaajira.svg'
+const placeHolder = [
+    {
+        one: '1'
+    },
+    {
+        two: '2'
+    },
+    {
+        three: '3'
+    },
+    {
+        four: '3'
+    }
+]
 
 function Clients() {
     const [ clients, setClients ] = useState('')
     useEffect(() => {
-      fetch('https://kipkemoi-backend.herokuapp.com/clients/')
+      fetch('https://kipkemoi-backend.herokuapp.com/clients1/')
         .then(res => {
           return res.json()
         })
@@ -22,7 +35,13 @@ function Clients() {
         })
     }, [])
 
-    let data = 'no clients yet'
+    let data = placeHolder.map((item, i)=> {
+      return (
+        <span style={{marginLeft: '10px', marginTop: '20px'}}>
+          <Skeleton width={200} height={70} />
+        </span>
+      )
+    })
     if (clients){
       data = clients.map(client => (
                 <img

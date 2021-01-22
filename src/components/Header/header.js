@@ -15,7 +15,7 @@ const header = (props) => {
               <img style={{height: '130px'}} src={me} alt="" />
             </div>
             <h2>
-              Hi, I'm Kipkemoi
+              Hi, I'm Kipkemoi 
               <span style={{paddingLeft: '10px'}} role="img" aria-label="Emoji">
                 👋
               </span>
