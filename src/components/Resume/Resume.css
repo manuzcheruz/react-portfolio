@@ -3,14 +3,14 @@
     align-items:flex-start; */
     width: 70%;
     margin-bottom: 30px;
+    margin-top: 20px;
 
 }
-.resume-wrapper h1{
+.resume-wrapper .title{
     font-size: 3rem;
-    line-height: 20px;
-    /* display: flex;
-    align-items: flex-start; */
+    line-height: 40px;
     text-align: left;
+    font-weight: bold;
 }
 
 .resume-wrapper .row {
@@ -21,15 +21,12 @@
     flex: 50%;
 }
 
-.resume-wrapper .column h2{
-    position: relative;
-    left: 0px;
-    padding-left: 5px;
+.resume-wrapper .column .subtitle{
     font-size: 2rem;
     line-height: 15px;
-    display: flex;
-    align-items: flex-start;
     text-align: left;
+    margin-top: 20px;
+    font-weight: bold;
 }
 
 .resume-wrapper .column h3{
@@ -93,13 +90,13 @@
     .resume-wrapper {
         width: 95%;
     }
-    .resume-wrapper h1 {
+    .resume-wrapper .title {
         font-size: 2rem;
-        line-height: 10px;
+        line-height: 25px;
     }
-    .resume-wrapper .column h2 {
+    .resume-wrapper .column .subtitle {
         font-size: 1.5rem;
-        line-height: 10px;
+        line-height: 20px;
     }
     .resume-wrapper .row {
         flex-direction: column;
@@ -192,7 +189,7 @@
     /* .resume-wrapper .column {
         flex: 50% !important;
     } */
-    .resume-wrapper .column h2 {
+    .resume-wrapper .column .subtitle {
         line-height: 30px;
     }
 }

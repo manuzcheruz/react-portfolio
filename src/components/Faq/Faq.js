@@ -1,8 +1,23 @@
 import React, {useEffect, useState} from 'react'
 import Fade from 'react-reveal/Fade'
 import Accordion from '../../Utilities/Accordion/Accordion'
+import Skeleton from 'react-loading-skeleton'
+import Aux from '../../hoc/Aux'
 
 import './Faq.css'
+
+
+const placeHolder = [
+    {
+        one: '1'
+    },
+    {
+        two: '2'
+    },
+    {
+        three: '2'
+    }
+]
 
 function Faq() {
     const [ faqs, setFaqs ] = useState('')
@@ -19,6 +34,32 @@ function Faq() {
           console.log(err);
         })
     }, [])
+
+    let data = placeHolder.map((item ,i) => {
+        return (
+            <Accordion
+                loader={
+                    <Aux>
+                        <div style={{marginTop: '15px'}}>
+                            <Skeleton height={50} />
+                            <Skeleton height={20} count={2} />
+                        </div>
+                    </Aux>
+                }
+                />
+        )
+    })
+
+    if (faqs) {
+        data = faqs.map(faq => {
+                            return (
+                                <Accordion
+                                    title={faq.question}
+                                    content={faq.answer}
+                                    />
+                            )
+                        })
+    }
     
     return (
         <div className="section" id="faqs">
@@ -30,14 +71,7 @@ function Faq() {
                 </Fade>
                 <Fade bottom>
                     <div className="faq" style={{width: '100%'}}>
-                        {faqs && faqs.map(faq => {
-                            return (
-                                <Accordion
-                                    title={faq.question}
-                                    content={faq.answer}
-                                    />
-                            )
-                        })}
+                        {data}
                     </div>
                 </Fade>
             </div>

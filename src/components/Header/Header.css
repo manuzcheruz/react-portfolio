@@ -6,35 +6,21 @@
     align-items: center;
 }
 
-.header-wrapper h2 {
-        font-size: 2rem;
-        text-align: center;
-        line-height: 10px;
-        font-weight: 700;
-        width: 100%;
-}
-
-.heading-wrapper h1 {
-            font-size: 4rem;
+.heading-wrapper .first {
+            font-size: 1.5rem;
             text-align: center;
-            line-height: 20px;
+            line-height: 30px;
             font-weight: bold;
 }
 
-/* .heading-wrapper p {
-        width: 50%;
-        text-align: center;
-        overflow: hidden;
-} */
-
-.heading-more-info h3 {
-    font-size: 1.5rem;
+.heading-more-info .second {
+    font-size: 1.2rem;
     text-align: center;
-    line-height: 10px;
+    line-height: 20px;
     font-weight: 200;
 }
 
-.heading-more-info h3 .heavy {
+.heading-more-info .second .heavy {
     font-weight: bold;
 }
 
@@ -43,14 +29,11 @@
     .header-wrapper {
         width: 95%;
     }
-    .header-wrapper h1 {
+    .header-wrapper .first {
         font-size: 1.7rem;
-        line-height: 10px;
+        line-height: 30px;
     }
-    .header-wrapper h2 {
-        font-size: 1rem;
-    }
-    .heading-more-info h3 {
+    .heading-more-info .second {
         font-size: 1rem;
         line-height: 20px;
     }
@@ -61,14 +44,11 @@
     .header-wrapper {
         width: 95%;
     }
-    .header-wrapper h1{
+    .header-wrapper .first{
         font-size: 1.8rem;
-        line-height: 10px;
+        line-height: 30px;
     }
-    .header-wrapper h2 {
-        font-size: 1.2rem;
-    }
-    .heading-more-info h3 {
+    .heading-more-info .second {
         font-size: 1rem;
         line-height: 20px;
     }
@@ -79,16 +59,13 @@
     .header-wrapper {
         width: 85%;
     }
-    .header-wrapper h1{
+    .header-wrapper .first {
         font-size: 2.5rem;
-        line-height: 10px;
+        line-height: 40px;
     }
-    .header-wrapper h2 {
+    .heading-more-info .second {
         font-size: 1.4rem;
-    }
-    .heading-more-info h3 {
-        font-size: 1.2rem;
-        /* line-height: 20px; */
+        line-height: 30px;
     }
 }
 
@@ -97,37 +74,37 @@
     .header-wrapper {
         width: 80%;
     }
-    .header-wrapper h1{
+    .header-wrapper .first {
         font-size: 3rem;
+        line-height: 45px;
     }
-    .header-wrapper h2 {
-        font-size: 1.8rem;
-    }
-    .heading-more-info h3 {
+    .heading-more-info .second {
         font-size: 1.5rem;
+        line-height: 30px;
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    .header-wrapper h1 {
+    .header-wrapper .first {
         font-size: 3.5rem;
+        line-height: 55px;
     }
-    .header-wrapper h2 {
-        font-size: 2rem;
-    }
-    .heading-more-info h3 {
+    .heading-more-info .second {
         font-size: 1.5rem;
+        line-height: 30px;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
-    .header-wrapper h1 {
+    .header-wrapper .first {
         font-size: 4rem;
+        line-height: 60px;
     }
-    .heading-more-info h3 {
+    .heading-more-info .second {
         font-size: 1.5rem;
+        line-height: 30px;
     }
 }
 

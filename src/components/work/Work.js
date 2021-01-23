@@ -63,7 +63,7 @@ function Work() {
                                         </div>
                                         <div>
                                             <h2 className="work-title">{item.title}</h2>
-                                            <h4 className="work-desc">{item.description}</h4>
+                                            <div className="work-desc">{item.description}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -75,8 +75,8 @@ function Work() {
         <div className="container">
             <div className="work-I-do-wrapper">
                 <Fade bottom>
-                    <h1>The work I do,</h1>
-                    <h1>and businesses I help.</h1>
+                    <div className="title">The work I do,</div>
+                    <div className="title">and businesses I help.</div>
                 </Fade>
                 <Fade bottom>
                     <div className="row-work">

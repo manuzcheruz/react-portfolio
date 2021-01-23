@@ -4,12 +4,10 @@
 
 }
 
-.work-I-do-wrapper h1 {
+.work-I-do-wrapper .title {
     text-align: left;
-    /* display: flex; */
-    /* align-items: flex-start; */
     font-size: 3rem;
-    line-height: 20px;
+    line-height: 40px;
 }
 
 .row-work{
@@ -36,6 +34,8 @@
 .work-desc{
     font-weight: 100;
     text-align: left;
+    font-size: 1rem;
+    line-height: 25px;
 }
 
 /* Extra small small devices (phones, 600px and down) */
@@ -43,9 +43,9 @@
     .work-I-do-wrapper {
         width: 95%;
     }
-    .work-I-do-wrapper h1 {
+    .work-I-do-wrapper .title {
         font-size: 1.7rem;
-        line-height: 10px;
+        line-height: 25px;
     }
     .row-work {
         grid-template-columns: 1fr;
@@ -57,9 +57,9 @@
     .work-I-do-wrapper {
         width: 90%;
     }
-    .work-I-do-wrapper h1 {
+    .work-I-do-wrapper .title {
         font-size: 1.8rem;
-        line-height: 10px;
+        line-height: 30px;
     }
     .row-work {
         grid-template-columns: 1fr;
@@ -71,9 +71,9 @@
     .work-I-do-wrapper {
         width: 80%;
     }
-    .work-I-do-wrapper h1 {
+    .work-I-do-wrapper .title {
         font-size: 2.5rem;
-        line-height: 10px;
+        line-height: 35px;
     }
 }
 
@@ -82,9 +82,9 @@
     .work-I-do-wrapper {
         width: 70%;
     }
-    .work-I-do-wrapper h1 {
+    .work-I-do-wrapper .title {
         font-size: 3rem;
-        line-height: 10px;
+        line-height: 40px;
     }
     .row-work {
         grid-template-columns: 1fr 1fr;

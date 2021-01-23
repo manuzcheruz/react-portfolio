@@ -12,13 +12,13 @@ function Resume(props) {
         <div className="container">
             <div className="resume-wrapper">
                 <Fade bottom>
-                    <h1>Resume</h1>
+                    <div className="title">Resume</div>
                 </Fade>
 
                 <Fade bottom>
                     <div className="row">
                         <div className="column">
-                            <h2>Skills</h2>
+                            <div className="subtitle">Skills</div>
                             {Skills()}
                         </div>
                     </div>
@@ -27,11 +27,11 @@ function Resume(props) {
                 <Fade bottom>
                     <div className="row">
                         <div className="column">
-                            <h2>Work Experience</h2>
+                            <div className="subtitle">Work Experience</div>
                             {Experience()}
                         </div>
                         <div className="column">
-                            <h2 style={{paddingBottom: '30px'}}>Tools</h2>
+                            <div className="subtitle" style={{paddingBottom: '30px'}}>Tools</div>
                             {Tools()}
                         </div>
                     </div>
@@ -40,11 +40,11 @@ function Resume(props) {
                 <Fade bottom>
                     <div className="row">
                         <div className="column">
-                            <h2>Online Courses</h2>
+                            <div className="subtitle">Online Courses</div>
                             {Courses()}
                         </div>
                         <div className="column">
-                          <h2>Education</h2>
+                          <div className="subtitle">Education</div>
                             {Education()}
                             <div className="memoji-box" style={{position: 'relative', backgroundColor: 'blue'}}>
                                 <img className="me2" src={me2} alt="" />

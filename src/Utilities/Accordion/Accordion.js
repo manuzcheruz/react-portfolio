@@ -1,4 +1,5 @@
 import React, {useState, useRef} from "react";
+import Aux from "../../hoc/Aux";
 import Chevron from '../Chevron/Chevron'
 
 import "./Accordion.css";
@@ -22,6 +23,8 @@ function toggleAccordion() {
 
  return (
    <div className="accordion__section">
+     {props.loader ? props.loader : 
+     <Aux>
       <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
         <p className="accordion__title">{props.title}</p>
         <Chevron className={`${setRotate}`} width={10} fill={"#777"} />
@@ -36,6 +39,7 @@ function toggleAccordion() {
           dangerouslySetInnerHTML={{ __html: props.content }}
         />
       </div>
+     </Aux>}
     </div>
  );
 }

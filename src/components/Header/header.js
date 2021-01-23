@@ -23,31 +23,21 @@ const header = (props) => {
           </Fade>
           <Fade bottom cascade>
             <div className="heading-wrapper">
-              <h1>
-                Building Software Systems,
-              </h1>
-              <h1>
-                products, brands, and
-              </h1>
-              <h1>
+              <div className="first">
+                Building Software Systems, <br />
+                products, brands, and <br />
                 experience
-              </h1>
+              </div>
             </div>
           </Fade>
           <Fade bottom>
             <div className="heading-more-info">
-              <h3>
-                a <span className="heavy">Fullstack Software Engineer</span> 
-              </h3>
-              <h3>
-                I specialize in both Front End and Back End, 
-              </h3>
-              <h3>
-                Responsive Web Design, UI/UX and
-              </h3>
-              <h3>
+              <div className="second"><br />
+                a <span className="heavy">Fullstack Software Engineer</span> <br />
+                specializing in both Front and Back End, <br />
+                Responsive Web Design, UI/UX and <br />
                 Visual Development.
-              </h3>
+              </div>
             </div>
           </Fade>
           <Fade bottom>
