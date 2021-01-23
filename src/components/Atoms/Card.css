@@ -10,43 +10,4 @@
     background-position: center;
     /* box-shadow: 0 2px 2px 0 rgba(43, 46, 207, 0.1) */
 }
-
-.card:hover{
-    opacity: 0.5;
-}
-
-.card .content {
-        /* font-family: "Open Sans"; */
-        text-align: center;
-        padding: 10px;
-        opacity: 0;
-        transition: all 500ms ease-in-out;
-        transform: translate(0, 20px);
-        cursor: pointer;
-}
-
-.card .content h1 {
-            font-size: 25px;
-            color: white;
-        }
-
-.card .content p {
-            font-size: 15px;
-            line-height: 1.5rem;
-            color: white;
-            margin-bottom: 20px;
-        }
-
-.card .content .btn {
-            background-color: black;
-            color: white;
-            padding: 10px;
-            text-decoration: none;
-            border-radius: 10px;
-        }
-
-.card .content:hover {
-            opacity: 1;
-            transform: translate(0, 0px);
-        } 
-    
+ 

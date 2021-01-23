@@ -48,11 +48,9 @@ function Projects() {
     if (projects){
       data = projects.map(project => (
                 <Card
-                  key={project.description}
+                  key={project.title}
                   heading={project.title}
-                  paragraph={project.description}
-                  imgUrl={project.thumbnail}
-                  projectLink={project.url}
+                  videoUrl={project.thumbnail}
                 ></Card>
               ))
     }
