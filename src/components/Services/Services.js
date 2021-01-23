@@ -19,7 +19,7 @@ const placeHolder = [
 function Services() {
     const [ services, setServices ] = useState('')
     useEffect(() => {
-      fetch('https://kipkemoi-backend.herokuapp.com/services1/')
+      fetch('https://kipkemoi-backend.herokuapp.com/services/')
         .then(res => {
           return res.json()
         })
@@ -61,14 +61,10 @@ function Services() {
                                     <img src={service.thumbnail} height="70px" alt="" />
                                 </div>
                                 <div className="serv-title" style={{marginTop: '10px'}}>
-                                    <h2>
-                                        {service.title}
-                                    </h2>
+                                    {service.title}
                                 </div>
                                 <div className="serv-content">
-                                    <h5>
-                                        {service.description}
-                                    </h5>
+                                    {service.description}
                                 </div>
                             </div>
                         </div>
@@ -77,10 +73,10 @@ function Services() {
     return (
         <div className="section" id="services">
         <div className="container" style={{marginTop: '50px'}}>
-            <div style={{display: 'block', zIndex: '1', textAlign: 'center' , height: '500px', backgroundColor: '#f2f7f7', width: '45%'}}>
-            <div className="services-wrapper" style={{zIndex: '2', width:'900px', marginLeft:'-200px'}}>
+            <div className="services-top">
+            <div className="services-wrapper">
                 <Fade bottom>
-                    <h1 style={{paddingBottom: '20px', marginLeft: '150px'}}>Services</h1>
+                    <div className="title">Services</div>
                 </Fade>
                 <Fade bottom>
                     <div className="row">
