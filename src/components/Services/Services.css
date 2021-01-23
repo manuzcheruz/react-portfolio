@@ -49,7 +49,7 @@
 }
 
 .services-wrapper .row .column .serv-card .serv-content{
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: left;
     font-size: 1.1rem;
     line-height: 25px;
@@ -59,7 +59,7 @@
 /* Extra small small devices (phones, 600px and down) */
 @media only screen and (max-width: 400px) {
     .services-top {
-        width: 100%;
+        width: 95%;
         height: auto;
     }
 
@@ -93,7 +93,7 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (min-width: 400px) {
     .services-top {
-        width: 100%;
+        width: 90%;
         height: auto;
     }
 
@@ -127,7 +127,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media screen and (min-width: 601px) {
     .services-top {
-        width: 100%;
+        width: 90%;
         height: auto;
     }
 
@@ -160,7 +160,7 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media screen and (min-width: 768px) {
     .services-top {
-        width: 100%;
+        width: 85%;
         height: auto;
     }
 
@@ -194,7 +194,7 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     .services-top {
-        width: 100%;
+        width: 80%;
         height: auto;
     }
 
@@ -203,7 +203,7 @@
     }
 
     .services-wrapper {
-        width: 95%;
+        width: 70%;
         /* z-index: 1; */
         width: 100%;
         margin-left: 0px;

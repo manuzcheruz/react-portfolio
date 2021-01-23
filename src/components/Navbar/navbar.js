@@ -16,7 +16,7 @@ function Navbar() {
             className="name"
             tabIndex={0}
           >
-            <span style={{height: '50px', width: '50px', marginRight: '10px'}}>
+            <span style={{height: '100px', width: '50px', marginRight: '10px'}}>
               <a style={{textAlign: 'center', padding: '20px', borderRadius: '50%', border: '1px solid #f2f7f7'}} className="email-link" href="mailto:kipkemoiemmanuel@icloud.com">
                 <Mail width={30} />
               </a>
