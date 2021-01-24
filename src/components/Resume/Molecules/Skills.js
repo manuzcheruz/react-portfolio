@@ -70,8 +70,6 @@ function Skills() {
         })
     }, [])
 
-    console.log(placeHolder);
-
     let data = placeHolder.map((item ,i)=> {
         return (
         <div className="column">

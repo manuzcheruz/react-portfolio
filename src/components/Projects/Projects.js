@@ -30,7 +30,6 @@ function Projects() {
           return res.json()
         })
         .then(response => {
-          // console.log(response);
           setProjects(response)
         })
         .catch(err => {

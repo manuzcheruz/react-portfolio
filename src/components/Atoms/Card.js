@@ -1,4 +1,5 @@
 import React from "react"
+import Aux from "../../hoc/Aux"
 
 import './Card.css'
 
@@ -8,9 +9,14 @@ const Card = ({ heading, videoUrl, loader }) => {
       className="card"
     >
       {loader? loader : 
-      <iframe title={heading} width="400" height="250"
-        src={videoUrl}>
-      </iframe>
+      <Aux>
+        <video controls
+          src={videoUrl}>
+        </video>
+        <div className="footer">
+          {heading} - demo
+        </div>
+      </Aux>
       }
     </div>
   )
