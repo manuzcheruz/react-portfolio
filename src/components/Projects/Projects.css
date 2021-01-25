@@ -18,20 +18,11 @@
         grid-gap: 30px;
 }
 
-        /* @include media(">=phone", "<lgphone") {
-            grid-template-columns: 1fr;
-        }
-
-        @include media(">=lgphone", "<tablet") {
-            grid-template-columns: 1fr;
-        }
-
-        @include media(">=tablet", "<desktop") {
-            grid-template-columns: 1fr 1fr;
-        } */
-
 /* Extra small small devices (phones, 600px and down) */
 @media only screen and (max-width: 400px) {
+    .work-wrapper {
+        width: 95%;
+    }
     .work-wrapper h1 {
         font-size: 2rem;
     }
@@ -42,6 +33,9 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (min-width: 400px) {
+    .work-wrapper {
+        width: 90%;
+    }
     .work-wrapper h1 {
         font-size: 2.2rem;
     }
@@ -52,6 +46,9 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media screen and (min-width: 600px) {
+    .work-wrapper {
+        width: 85%;
+    }
     .work-wrapper h1 {
         font-size: 2.5rem;
     }
@@ -62,6 +59,12 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media screen and (min-width: 768px) {
+    .work-wrapper {
+        width: 80%;
+    }
+    .work-wrapper {
+        width: 80vw;
+    }
     .work-wrapper h1 {
         font-size: 3rem;
     }
@@ -72,6 +75,9 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (min-width: 992px) {
+    .work-wrapper {
+        width: 70%;
+    }
     .work-wrapper .grid {
         grid-template-columns: repeat(3, 1fr);
     }

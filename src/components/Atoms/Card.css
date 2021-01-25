@@ -4,8 +4,8 @@
 }
 
 .card video {
-    width: 100% !important;
-    height: auto !important;
+    height: 100% !important;
+    width: auto !important;
 }
 
 .card .footer {
@@ -13,3 +13,33 @@
     color: grey;
 }
  
+@media only screen and (max-width: 400px) {
+    .card {
+        width: 95%;
+        height: 250px;
+    }
+    .card video {
+        height: 100% !important;
+        width: 98% !important;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 400px) {
+    .card {
+        width: 90%;
+        height: 250px;
+    }
+    .card video {
+        height: 100% !important;
+        width: 90% !important;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (max-width: 600px) {
+    .card {
+        width: 85%;
+        height: 250px;
+    }
+}

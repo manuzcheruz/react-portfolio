@@ -90,7 +90,7 @@ function Testimonial() {
                                                 <div className="cont">
                                                     <p className="ex-content" style={{color: 'black', textAlign: 'left', fontWeight: '100'}}>{test.description}</p>
                                                 </div>
-                                                <p className="name"><span>{test.name}</span><span className="role">{test.role}</span></p>
+                                                <p className="name"><span style={{marginRight: '10px'}}>{test.name}</span><span className="role">{test.role}</span></p>
                                                 <div className="dots-chevron" style={{display: 'grid', gridTemplateColumns: '4fr 1fr 1fr' ,gridGap: '0px', width: '200px', marginTop: '40px', textAlign: 'left'}}>
                                                     <DotGroup disableActiveDots={true} renderDots={dots} />
                                                     <ButtonBack style={{border: 'none', backgroundColor: 'white'}}>
