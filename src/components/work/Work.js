@@ -62,7 +62,7 @@ function Work() {
                                             <img style={{height: '100%', width: '100%'}} src={item.thumbnail} alt="" />
                                         </div>
                                         <div>
-                                            <h2 className="work-title">{item.title}</h2>
+                                            <h2 className="work-title"><a style={{textDecoration: 'none', color: 'black'}} href={item.url}>{item.title}</a></h2>
                                             <div className="work-desc">{item.description}</div>
                                         </div>
                                     </div>
